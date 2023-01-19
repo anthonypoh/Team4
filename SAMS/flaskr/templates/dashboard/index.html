@@ -1,0 +1,31 @@
+{% extends 'base.html' %}
+
+{% block header %}
+{% if g.user['username'] == 'admin' %}
+    <h1>{% block title %}Administration{% endblock %}</h1>
+    <a class="action" href="{{ url_for('dashboard.create') }}">New</a>
+{% elif g.user %}
+    <h1>{% block subtitle %}Student Attendance Management System{% endblock %}</h1>
+{% endif %}
+{% endblock %}
+
+{% block content %}
+  {% if g.user['username'] != 'admin' %}
+  {% for class in classes %}
+    <article class="class">
+      <div>
+        {% if g.user['id'] == class['student_id'] %}
+        <h1>Your classes</h1>
+        <h1>{{ class['class_id'] }}</h1>
+        <div class="about">Attended: {{ 'Yes' if class['attended'] else "No" }}</div>
+        {% else %}
+        <h1>Please login to your account.</h1>
+        {% endif %}
+      </div>
+    </article>  
+    {% if not loop.last %}
+      <hr>
+    {% endif %}
+  {% endfor %}
+  {% endif %}
+{% endblock %}
