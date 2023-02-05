@@ -26,5 +26,6 @@ CREATE TABLE class (
   attended INTEGER NOT NULL,
   late INTEGER,
   outside INTEGER,
+  class_title TEXT NOT NULL,
   FOREIGN KEY (student_id) REFERENCES user (id)
 );
