@@ -5,27 +5,51 @@
     <h1>{% block title %}Administration{% endblock %}</h1>
     <a class="action" href="{{ url_for('dashboard.create') }}">New</a>
 {% elif g.user %}
-    <h1>{% block subtitle %}Student Attendance Management System{% endblock %}</h1>
+    <h1>{% block subtitle %}Welcome Student{% endblock %}</h1>
 {% endif %}
 {% endblock %}
 
 {% block content %}
-  {% if g.user['username'] != 'admin' %}
-  {% for class in classes %}
-    <article class="class">
-      <div>
-        {% if g.user['id'] == class['student_id'] %}
-        <h1>Your classes</h1>
-        <h1>{{ class['class_id'] }}</h1>
-        <div class="about">Attended: {{ 'Yes' if class['attended'] else "No" }}</div>
-        {% else %}
-        <h1>Please login to your account.</h1>
+  {% if g.user %}
+    {% if g.user['username'] != 'admin' %}
+      <!-- {% for class in classes|sort(attribute='time') %}
+        {% if loop.first %}
+          <article class="class">
+            <div>
+              {% if g.user['id'] == class['student_id'] %}
+              <h1>Your classes</h1>
+              <p>Class: {{ class['class_id'] }}, Time: {{ class['time'] }}, Location: {{ class['location'] }} </p>
+              <p>{{ "Allow" if allowAttend(class['time']) >= 0 and allowAttend(class['time']) <= 240 else "Not Allowed" }}</p>
+              <p>{{ today_date < class['time'] }}</p>
+              <div class="about">Attended: {{ 'Yes' if class['attended'] else "No" }}</div>
+              {% else %}
+              <h1>Please login to your account.</h1>
+              {% endif %}
+            </div>
+          </article>  
+        <{% if not loop.last %}
+          <hr>
         {% endif %}
-      </div>
-    </article>  
-    {% if not loop.last %}
-      <hr>
+        {% endif %}
+      {% endfor %} -->
+      <article class="class">
+        <h1>Your next class:</h1>
+      {% set nextClass = getNextClass() %}
+        <div>
+          <p>{{ nextClass[0] }} - {{ nextClass[1] }}</p>
+          <p>Time: {{ nextClass[2] }}</p>
+          <p>Location: {{ nextClass[3] }}</p>
+          {% if nextClass[4] == 0 %}
+            <button>Take Attendance</button>
+          {% else %}
+            <p>Attended</p>
+          {% endif %}
+        </div>
+      </article>
     {% endif %}
-  {% endfor %}
+  {% else %}
+    <div>
+      Please login to your student account.
+    </div>
   {% endif %}
 {% endblock %}

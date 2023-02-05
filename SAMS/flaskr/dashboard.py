@@ -1,6 +1,7 @@
 from flask import (
     Blueprint, flash, g, redirect, render_template, request, url_for
 )
+import datetime
 from werkzeug.exceptions import abort
 
 from flaskr.auth import login_required
@@ -18,14 +19,39 @@ def index():
     #     ' ORDER BY created DESC'
     # ).fetchall()
     classes = db.execute(
-        'SELECT c.id, student_id, class_id, c.batch, attended, late, outside'
+        'SELECT c.id, student_id, class_id, time, location, attended, late, outside'
         ' FROM class c JOIN user u ON c.student_id = u.id'
         ' WHERE c.student_id = u.id'
         ' ORDER BY class_id DESC'
     ).fetchall()
 
-    return render_template('dashboard/index.html', classes=classes)
+    for c in classes:
+        print(c)
 
+    return render_template('dashboard/index.html', classes=classes, allowAttend=allowAttend, getNextClass=getNextClass)
+    
+def getNextClass():
+    db = get_db()
+    cursor = db.cursor()
+    classes = cursor.execute
+    classes = db.execute(
+        'SELECT c.id, student_id, class_id, time, location, attended, late, outside, class_title'
+        ' FROM class c JOIN user u ON c.student_id = u.id'
+        ' WHERE c.student_id = u.id'
+        ' ORDER BY class_id DESC'
+    ).fetchall()
+    for c in classes:
+        if allowAttend(c['time']) < 0:
+            nextClass = [c['class_id'], c['class_title'], c['time'], c['location'], c['attended']]
+            return nextClass
+
+def allowAttend(classTime):
+    difference = (datetime.datetime.now() - datetime.datetime.strptime(classTime, "%Y-%m-%d %H:%M:%S")).total_seconds() / 60
+    return difference
+
+@bp.context_processor
+def inject_today_date():
+    return {'today_date': datetime.datetime.now().strftime("%Y-%m-%d %H:%M:%S")}
 
 @bp.route('/create', methods=('GET', 'POST'))
 @login_required

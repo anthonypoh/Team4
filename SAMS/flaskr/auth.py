@@ -30,8 +30,8 @@ def register():
                 userType = 'student'
             try:
                 db.execute(
-                    "INSERT INTO user (username, password, userType) VALUES (?, ?, ?)",
-                    (username, generate_password_hash(password), userType),
+                    "INSERT INTO user (username, password) VALUES (?, ?)",
+                    (username, generate_password_hash(password)),
                 )
                 db.commit()
             except db.IntegrityError:
