@@ -25,10 +25,7 @@ def index():
         ' ORDER BY class_id DESC'
     ).fetchall()
 
-    for c in classes:
-        print(c)
-
-    return render_template('dashboard/index.html', classes=classes, allowAttend=allowAttend, getNextClass=getNextClass)
+    return render_template('dashboard/index.html', classes=classes, allowAttend=allowAttend, getNextClass=getNextClass, isStr=isStr)
     
 def getNextClass():
     db = get_db()
@@ -38,12 +35,24 @@ def getNextClass():
         'SELECT c.id, student_id, class_id, time, location, attended, late, outside, class_title'
         ' FROM class c JOIN user u ON c.student_id = u.id'
         ' WHERE c.student_id = u.id'
-        ' ORDER BY class_id DESC'
     ).fetchall()
+    now = datetime.datetime.now().strftime("%Y-%m-%d %H:%M:%S")
+    earliest = None
+    passed = None
     for c in classes:
-        if allowAttend(c['time']) < 0:
-            nextClass = [c['class_id'], c['class_title'], c['time'], c['location'], c['attended']]
-            return nextClass
+        id, sid, cid, time, location, attended, late, outside, ctitle = c
+        if time >= now and (earliest is None or time < earliest['time']):
+            earliest = c
+        if now > time and (passed is None or time > passed['time']):
+            passed = c
+
+    # check if none, and if previous class is within 30 minutes
+    nextClass = earliest
+    print(allowAttend(passed['time']))
+    if allowAttend(passed['time']) < 30:
+        nextClass = passed
+    print('next class:', nextClass)
+    return nextClass
 
 def allowAttend(classTime):
     difference = (datetime.datetime.now() - datetime.datetime.strptime(classTime, "%Y-%m-%d %H:%M:%S")).total_seconds() / 60
@@ -52,6 +61,9 @@ def allowAttend(classTime):
 @bp.context_processor
 def inject_today_date():
     return {'today_date': datetime.datetime.now().strftime("%Y-%m-%d %H:%M:%S")}
+
+def isStr(obj):
+    return isinstance(obj, str)
 
 @bp.route('/create', methods=('GET', 'POST'))
 @login_required

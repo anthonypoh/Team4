@@ -35,16 +35,24 @@
       <article class="class">
         <h1>Your next class:</h1>
       {% set nextClass = getNextClass() %}
+      {% if isStr(nextClass) == false %} 
         <div>
-          <p>{{ nextClass[0] }} - {{ nextClass[1] }}</p>
-          <p>Time: {{ nextClass[2] }}</p>
-          <p>Location: {{ nextClass[3] }}</p>
-          {% if nextClass[4] == 0 %}
-            <button>Take Attendance</button>
+          <p>{{ nextClass[2] }} - {{ nextClass[8] }}</p>
+          <p>Time: {{ nextClass[3] }}</p>
+          <p>Location: {{ nextClass[4] }}</p>
+          {% if nextClass[5] == 0 %}
+            {% if allowAttend(nextClass[3]) >= 0 and allowAttend(nextClass[3]) <= 30 %}
+              <button>Take Attendance</button>
+            {% endif %}
           {% else %}
             <p>Attended</p>
           {% endif %}
         </div>
+      {% else %}
+        <div>
+          <p>You have no upcoming classes.</p>
+        </div>
+      {% endif %}
       </article>
     {% endif %}
   {% else %}
