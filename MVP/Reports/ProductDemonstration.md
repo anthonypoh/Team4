@@ -10,4 +10,4 @@ In this report we will be demonstrating the following features:
     - Admin
 - Partial attendance system
 
-![alt text](https://github.com/anthonypoh/Team4/blob/dev/MVP/Reports/Images/ProductDemonstration/index.png)
+![alt text](https://github.com/anthonypoh/Team4/blob/dev/MVP/Reports/Images/ProductDemonstration/base.png)
