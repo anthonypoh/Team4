@@ -25,3 +25,6 @@ This next image displays the Attend button.
 
 After clicking the Attend button, the request is sent to the backend which updates the students attendance in the database. An alert is shown and if it exists; the next classes details will be displayed.
 ![alt text](https://github.com/anthonypoh/Team4/blob/dev/MVP/Reports/Images/ProductDemonstration/marked.png)
+
+The following is the admin dashboard. Currently the management functions of the admin page have not been implemented yet. In the future we will have included all the features and requirements listed in the breif.
+![alt text](https://github.com/anthonypoh/Team4/blob/dev/MVP/Reports/Images/ProductDemonstration/admin.png)
