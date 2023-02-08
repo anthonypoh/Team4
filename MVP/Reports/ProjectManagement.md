@@ -80,11 +80,7 @@ A communication issue that might be affecting the project are due to full time w
 
 
 ## Sprint Burndown Charts
-
-*In this section include a screenshot of a sprint-burndown chart for each of your completed sprints.*
-
-*For each sprint, include links to the standup meetings (recorded on Jira, hopefully) associated with each sprint.*
-
+![image](https://user-images.githubusercontent.com/122019386/217585971-decafc28-3ffc-45b8-8385-442dfa93e51a.png)
 ## Burndown-Charts Discussion
 
 Burndown charts indicate the progress of a project by showing the amount of work completed versus the amount of work remaining in a sprint. A downward slope in the chart represents progress, while a flat or upward slope suggests challenges and obstacles.
