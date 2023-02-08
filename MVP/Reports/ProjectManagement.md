@@ -10,6 +10,7 @@ Week 2
     - Issue 2, Pages of website/application; // Megan
     - Issue 3, Leave Application form, files to upload, leave type and date features; // Jun Yong
     - Issue 4, Calender System, Calender System for Lecturers and Admin to edit, date, time and cancellation of classes; // Danny
+
 Week 3
   - Completed
       - Issue 1 // Anthony
