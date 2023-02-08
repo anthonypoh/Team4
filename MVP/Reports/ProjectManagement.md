@@ -20,6 +20,7 @@ Week 3
       - Issue 5 Attendance Page // Anthony
   - Pending
       - Issue 6 Clocking in and out feature
+
 Week 4 
   - Completed
       - Issue 2 // Megan 
@@ -31,6 +32,7 @@ Week 4
   - Pending
       - Issue 7 Create a Pertinent Statistic, allow user to download the data in Excel format
       - Issue 8 Create notification function.
+
 Week 5
   - Completed
       - Issue 3 // Jun Yong
@@ -47,6 +49,7 @@ Week 5
   - Pending
       - Presentation Slide
       - Burndown Chart
+
 Week 6
   - Completed
       - Issue 7 // Jun Yong
