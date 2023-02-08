@@ -9,5 +9,12 @@ In this report we will be demonstrating the following features:
     - User
     - Admin
 - Partial attendance system
-
+---
+## Demo
+When visiting the web application, the following window is shown and it prompts you to login to your account.
 ![alt text](https://github.com/anthonypoh/Team4/blob/dev/MVP/Reports/Images/ProductDemonstration/base.png)
+
+Clicking the 'log in', you will be taken to another page to enter your credentials.
+![alt text](https://github.com/anthonypoh/Team4/blob/dev/MVP/Reports/Images/ProductDemonstration/login.png)
+
+Logging in as a student moves you to your student dashboard. Here you will see the next class that you can attend.
