@@ -102,7 +102,7 @@ To improve velocity and estimation ability in future sprints, teams can take the
 By implementing these strategies, teams can improve their velocity and estimation ability and deliver better results in future sprints.
 
 ## Product Backlog
-![image](https://user-images.githubusercontent.com/122019386/217575508-f7af9085-12b4-49c6-b95e-9a89c60245a7.png)
+![image](https://user-images.githubusercontent.com/122019386/217577553-528e8eac-0db5-47c2-8fbc-1ec77664905f.png)
 
 ## Other Areas
 *If your team has anything else they want to demonstrate, e.g. advanced project management tools, reporting graphs with suitable explanation and interpretation, advanced use of Jira (e.g. issue links, epics, versions), or continuous integration tools, then include a summary here.*
