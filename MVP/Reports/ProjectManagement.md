@@ -83,6 +83,10 @@ A communication issue that might be affecting the project are due to full time w
 ![image](https://user-images.githubusercontent.com/122019386/217585971-decafc28-3ffc-45b8-8385-442dfa93e51a.png)
 ## Burndown-Charts Discussion
 
+The Sprint Burn Down Chart shows the progress of a sprint that predicts a 10 weeks and had a total of 10 story points. The chart starts with a total of 10 story points for the entire sprint and plots the remaining work each week until it reaches zero, indicating that all of the work for the sprint has to be completed.
+
+At the start of the sprint, the remaining work is at its highest, with 10 story points still to be completed. As the sprint progresses, the remaining work decreases each week, indicating that the team is making progress. If the team is consistently completing work, the line on the chart will show a downward slope, indicating that the team is making steady progress. If the line is flat or slopes upwards, it could suggest that the team is facing obstacles or challenges that are slowing down progress. The Sprint Burn Down Chart provides a visual representation of the team's progress and helps to identify trends and areas for improvement.
+
 Burndown charts indicate the progress of a project by showing the amount of work completed versus the amount of work remaining in a sprint. A downward slope in the chart represents progress, while a flat or upward slope suggests challenges and obstacles.
 
 To improve velocity and estimation ability in future sprints, teams can take the following steps:
