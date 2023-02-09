@@ -18,22 +18,21 @@ An effort log is a record of the time, activities, and tasks performed by team m
 
 
 ### Sprint 2 (University Week 2):
- - Sharing his idea via online meeting. 
- - Set up Flask application server make sure it is working as expected.
- - Create a burndown chart to visualize the project's progress.
+ - Sharing ideas via online meeting. 
+ - Set up basic Flask application server to explore the structure.
  ![CE291 Intranet WebApp Diagram-2](https://user-images.githubusercontent.com/122019681/217792094-0b7397b0-c82f-485b-9c34-4418884b91f4.jpg)
 
  
 
 ### Sprint 3 (University Week 3):
- - Design the layout and visualization: Decide on the layout and format of the dashboard. Choose appropriate charts, tables, and graphs to display the data in a clear and meaningful way.
+ - Implement basic dashboard: Discuss issues to tackle next sprint. Ensure key features are met for MVP.
 ![Dashboard](https://user-images.githubusercontent.com/122019681/217791949-b793cef8-82e2-4bc8-a378-2e551a67bfb0.PNG)
 
 
 ### Sprint 4 (University Week 4):
- - Create a login and register page for student attendance management system.
+ - Create a login and attendance page for student attendance management system.
  - Create an user and class database.
-![Register page](https://user-images.githubusercontent.com/122019681/217792210-c88dd87a-7579-45ed-bc8c-7504e963615b.PNG)
+![alt text](https://github.com/anthonypoh/Team4/blob/dev/MVP/Reports/Images/ProductDemonstration/attend.png)
 
 
 ### Sprint 5 (University Week 5):
@@ -71,8 +70,7 @@ An effort log is a record of the time, activities, and tasks performed by team m
  - Megan Xie designed the UI for the MVP (Minimum Viable Product).UI design is an important aspect of product development as it plays a crucial role in determining the look and feel of the application, and it can greatly impact the user experience and usability. 
 
 ### Sprint 1 (University Week 1):
- - Discussed for product backlog.
- - Shared her online research to team member.
+ - Discussed for product backlog
 
 ### Sprint 2 (University Week 2):
  - Install pip and flask for developing.
@@ -106,10 +104,10 @@ An effort log is a record of the time, activities, and tasks performed by team m
 
 ### Sprint 3 (University Week 3):
  - Continue discussed for product backlog.
-
+ - Fill up project backlog.
 
 ### Sprint 4 (University Week 4):
-- Continue discussed for product backlog.
+ - Fill up project backlog.
 
 ### Sprint 5 (University Week 5):
- - Collect team effort log and submitted in markdown format.
+ - Collect team effort log and submit in md format.
