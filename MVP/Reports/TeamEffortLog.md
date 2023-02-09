@@ -105,10 +105,10 @@ An effort log is a record of the time, activities, and tasks performed by team m
 
 ### Sprint 3 (University Week 3):
  - Continue discussed for product backlog.
- - Fill up project backlog.
+
 
 ### Sprint 4 (University Week 4):
- - Fill up project backlog.
+- Continue discussed for product backlog.
 
 ### Sprint 5 (University Week 5):
- - Collect team effort log and submit in md format.
+ - Collect team effort log and submitted in markdown format.
