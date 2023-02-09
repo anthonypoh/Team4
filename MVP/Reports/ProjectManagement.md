@@ -67,7 +67,6 @@ Week 6
 
 
 ## Project management discussion
-
 Our team has worked effectively together and demonstrated strong collaboration skills. Each team member has shown responsibility with their respective task and has been proactive in communicating any issues or problems to the team. This has resulted in a smooth and dynamic workflow and efficient problem-solving.
 
 The project is moving along smoothly, and we are on track to meet our deadlines. We have been able to recognize any potential difficulties and take immediate action to address them because of our regular check-ins and progress updates. Our careful and thorough planning and project management techniques have been essential to the project's success thus far. Overall, we are confident in our ability to achieve a high-quality final product. 
@@ -87,20 +86,16 @@ The Sprint Burn Down Chart shows the progress of a sprint that predicts a 10 wee
 At the start of the sprint, the remaining work is at its highest, with 10 story points still to be completed. As the sprint progresses, the remaining work decreases each week, indicating that the team is making progress. If the team is consistently completing work, the line on the chart will show a downward slope, indicating that the team is making steady progress. If the line is flat or slopes upwards, it could suggest that the team is facing obstacles or challenges that are slowing down progress. The Sprint Burn Down Chart provides a visual representation of the team's progress and helps to identify trends and areas for improvement.
 
 ## Burndown-Charts Discussion
-
 Burndown charts indicate the progress of a project by showing the amount of work completed versus the amount of work remaining in a sprint. A downward slope in the chart represents progress, while a flat or upward slope suggests challenges and obstacles.
 
 To improve velocity and estimation ability in future sprints, teams can take the following steps:
-
-    - Enhance estimation techniques: Teams can work on refining their estimation techniques to ensure they are more accurate and realistic.
-
-    - Prioritize tasks: Teams can prioritize tasks based on their complexity and importance to focus on critical tasks.
-
-    - Address roadblocks: Teams can identify and address any roadblocks that are slowing down progress.
-
-    - Conduct retrospectives: Teams can regularly hold retrospectives to reflect on their progress and identify areas for improvement.
+  - Enhance estimation techniques: Teams can work on refining their estimation techniques to ensure they are more accurate and realistic.
+  - Prioritize tasks: Teams can prioritize tasks based on their complexity and importance to focus on critical tasks.
+  - Address roadblocks: Teams can identify and address any roadblocks that are slowing down progress.
+  - Conduct retrospectives: Teams can regularly hold retrospectives to reflect on their progress and identify areas for improvement.
 
 By implementing these strategies, teams can improve their velocity and estimation ability and deliver better results in future sprints.
 
 ## Product Backlog
+![image](https://user-images.githubusercontent.com/122019386/217577553-528e8eac-0db5-47c2-8fbc-1ec77664905f.png)
 
