@@ -116,11 +116,3 @@ for members who needs help with their task. Our scrum master is very approachabl
 
 We are using the AGILE method to manage risks and it is being tracked and updated in real time. The four step risks control method are: Identifying Risks, Making an Assement, considering responses and Analyzing reviews, where
 we apply to our projects and this helps us to mitigate risks effectivley. 
-
-* *Include a URL link to the Jira risk issue.* 
-* *Paste in the Risk's Description and Summary from Jira.  Also state the Impact and Likilihood.*
-* *Give details of whether this story has been assigned to someone yet, and whether it is completed yet.*
-* *Include, from the Jira description / comments, details of what mitigating actions are being taking and by whom.*
-
-*When marking this section we will be looking to see several realistic risks have been noted, and are actively being tracked and mitigated against.*
-
