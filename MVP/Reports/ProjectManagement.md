@@ -103,4 +103,4 @@ To improve velocity and estimation ability in future sprints, teams can take the
 By implementing these strategies, teams can improve their velocity and estimation ability and deliver better results in future sprints.
 
 ## Product Backlog
-<img width="755" alt="image" src="https://user-images.githubusercontent.com/122019386/217701660-80f18398-c893-40d0-a618-adf05081f745.png">
+
