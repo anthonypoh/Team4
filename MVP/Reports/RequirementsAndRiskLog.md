@@ -11,46 +11,46 @@ Jun Yong: Development Team/Stake holders
 
 *List several user stories (no more than 8) that describe the product requirements. For each user story that you include:*
 
-User Story 1 - I need a system to track and manage students attendance and allow students/lecturers to access the system so that i can manage the users expectations. 
+**User Story 1** - I need a system to track and manage students attendance and allow students/lecturers to access the system so that i can manage the users expectations. 
 Issue 1.1 - Create Flask Application Server
 Issue 1.2 - Create User Database
 Issue 1.3 - Create Class Database
 Issue 1.4 - Create MVP UI
 
-User Story 2 - Clocking in and out, This is an attendance management essential – student should be able to clock in and clock out after the class is complete (Student)
+**User Story 2** - Clocking in and out, This is an attendance management essential – student should be able to clock in and clock out after the class is complete (Student)
 Issue 2.1 -  Create Home page
 Issue 2.2 - Select Class (Database) to input attendance
 Issue 2.3 -  Input button to input current time 
 Issue 2.4 -  Input Condition using face recognization
 
-User Story 3 - Leave Application, To apply and manage the administrative reasons so that i can ensure my excuses are recieved. (Student)
+**User Story 3** - Leave Application, To apply and manage the administrative reasons so that i can ensure my excuses are recieved. (Student)
 Issue 3.1 - A Leave Application Page
 Issue 3.2 - Apply Leave Form, Files to upload, Leave type and Date
 Issue 3.3 - Once Submitted, to have a Overall Status page to show, Pending and History leave form.
 Issue 3.4 - Allow (Admin) to approve or reject the application review. 
 
-User Story 4 - Calender feature, to see a overview of classes users have for the months, with the most recent timetable in effect for the change or replacement class. (Student, Lecturer & Admin)  
+**User Story 4** - Calender feature, to see a overview of classes users have for the months, with the most recent timetable in effect for the change or replacement class. (Student, Lecturer & Admin)  
 Issue 4.1 - Calender System
 Issue 4.2 - (Lecturer & Admin) Create / edit, Date, Time, and Cancellation of classes 
 Issue 4.3 - Reminder or notification Feature: Users are able to set alarms to be reminded of upcoming classes and submissions. 
 Issue 4.4 - Classroom information, physical class or online classes. Can be updated by the (Lecturer or Admin)
 
-User Story 5 - to be able to view the attendance summary for a lesson across a semester and amend accordingly when required. (Admin)
+**User Story 5** - to be able to view the attendance summary for a lesson across a semester and amend accordingly when required. (Admin)
 Issue 5.1 -  Create an attendance page summary
 Issue 5.2 -  Create option page for each semester
 Issue 5.3 -   Import data from database
 
-User Story 6 - To view the student name list of the selected class, amend & manage all the students attendances (LECTURER & ADMIN)
+**User Story 6** - To view the student name list of the selected class, amend & manage all the students attendances (LECTURER & ADMIN)
 Issue 6.1 - Button to select the specific class
 Issue 6.2 -  Display Student list, with check box to show student is present or absent
 Issue 6.3 - Feature for lecturer to add & edit student list
 
-User Story 7 - Advanced analytics, I want to to view a summary of a particular lesson as well as the overall attendance for a trimester along with pertinent statistics.  (LECTURER & ADMIN)
+**User Story 7** - Advanced analytics, I want to to view a summary of a particular lesson as well as the overall attendance for a trimester along with pertinent statistics.  (LECTURER & ADMIN)
 Issue 7.1 -  Create a pertinent statistic
 Issue 7.2 -  Import data from the attendance summary
 Issue 7.3 -  Allow user to download the data in Excel format
 
-User story 8 - System to automatically give warnings when the percentage attendance fall below the requirement or should a consecutive number of lessons be missed. (Student)
+**User story 8** - System to automatically give warnings when the percentage attendance fall below the requirement or should a consecutive number of lessons be missed. (Student)
 Issue 8.1 -  Create pop-up notification
 Issue 8.2 - Able to detect the percentage of attendance
 Issue 8.3 - Allow system to send notification 
