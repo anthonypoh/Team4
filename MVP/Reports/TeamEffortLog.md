@@ -71,7 +71,8 @@ An effort log is a record of the time, activities, and tasks performed by team m
  - Megan Xie designed the UI for the MVP (Minimum Viable Product).UI design is an important aspect of product development as it plays a crucial role in determining the look and feel of the application, and it can greatly impact the user experience and usability. 
 
 ### Sprint 1 (University Week 1):
- - Discussed for product backlog
+ - Discussed for product backlog.
+ - Shared her online research to team member.
 
 ### Sprint 2 (University Week 2):
  - Install pip and flask for developing.
