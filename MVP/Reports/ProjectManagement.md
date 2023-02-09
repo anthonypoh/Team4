@@ -80,7 +80,7 @@ A communication issue that might be affecting the project are due to full time w
 
 
 ## Sprint Burndown Charts
-![image](https://user-images.githubusercontent.com/122019386/217585971-decafc28-3ffc-45b8-8385-442dfa93e51a.png)
+<img width="755" alt="image" src="https://user-images.githubusercontent.com/122019386/217701806-7d2872ac-527a-411d-845a-7d46aabfb869.png">
 
 The Sprint Burn Down Chart shows the progress of a sprint that predicts a 10 weeks and had a total of 10 story points. The chart starts with a total of 10 story points for the entire sprint and plots the remaining work each week until it reaches zero, indicating that all of the work for the sprint has to be completed.
 
