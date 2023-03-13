@@ -9,7 +9,6 @@ from flaskr.db import get_db
 
 bp = Blueprint('dashboard', __name__)
 
-
 @bp.route('/')
 def index():
     db = get_db()
@@ -25,7 +24,13 @@ def index():
         ' ORDER BY class_id DESC'
     ).fetchall()
 
-    return render_template('dashboard/index.html', classes=classes, allowAttend=allowAttend, getNextClass=getNextClass, isStr=isStr)
+    return render_template(
+        'dashboard/index.html', 
+        classes=classes, 
+        allowAttend=allowAttend, 
+        getNextClass=getNextClass, 
+        isStr=isStr,
+        )
     
 def getNextClass():
     db = get_db()
@@ -48,10 +53,8 @@ def getNextClass():
 
     # check if none, and if previous class is within 30 minutes
     nextClass = earliest
-    print(allowAttend(passed['time']))
     if allowAttend(passed['time']) < 30:
         nextClass = passed
-    print('next class:', nextClass)
     return nextClass
 
 def allowAttend(classTime):
@@ -64,6 +67,65 @@ def inject_today_date():
 
 def isStr(obj):
     return isinstance(obj, str)
+
+@bp.route('/takeAttendance', methods=('GET', 'POST'))
+def takeAttendace():
+    db = get_db()
+    error = None
+    classes = db.execute(
+        'SELECT c.id, student_id, class_id, time, location, attended, late, outside, class_title'
+        ' FROM class c JOIN user u ON c.student_id = u.id'
+        ' WHERE c.student_id = u.id'
+        ' ORDER BY class_id DESC'
+    ).fetchall()
+    if request.method == 'POST':
+        student = request.form['student']
+        lesson = request.form['lesson']
+        time = request.form['time']
+        print(student, lesson, time)
+        try:
+            db.execute(
+                'UPDATE class SET attended = ?'
+                ' WHERE student_id = ? AND class_id = ? AND time = ?',
+                (1, student, lesson, time )
+            )
+            db.commit()
+            success = "Attendance marked!"
+            flash(success)
+            return redirect(url_for('index'))
+        except db.IntegrityError:
+            error = "Something went wrong."
+            flash(error)
+    #     username = request.form['username']
+    #     password = request.form['password']
+    #     db = get_db()
+    #     error = None
+    #     user = db.execute(
+    #         'SELECT * FROM user WHERE username = ?', (username,)
+    #     ).fetchone()
+
+    #     if user is None:
+    #         error = 'Incorrect username.'
+    #     elif not check_password_hash(user['password'], password):
+    #         error = 'Incorrect password.'
+    #     print(user)
+
+    #     if error is None and username == 'admin':
+    #         session.clear()
+    #         session['user_id'] = user['id']
+    #         return redirect(url_for("admin.admin"))
+    #     elif error is None:
+    #         session.clear()
+    #         session['user_id'] = user['id']
+    #         return redirect(url_for('index'))
+    #     flash(error)
+    return render_template(
+        'dashboard/index.html', 
+        classes=classes, 
+        allowAttend=allowAttend, 
+        getNextClass=getNextClass, 
+        isStr=isStr,
+        )
 
 @bp.route('/create', methods=('GET', 'POST'))
 @login_required

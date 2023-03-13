@@ -3,7 +3,7 @@
 {% block header %}
 {% if g.user['username'] == 'admin' %}
     <h1>{% block title %}Administration{% endblock %}</h1>
-    <a class="action" href="{{ url_for('dashboard.create') }}">New</a>
+    <!-- <a class="action" href="{{ url_for('dashboard.create') }}">New</a> -->
 {% elif g.user %}
     <h1>{% block subtitle %}Welcome Student{% endblock %}</h1>
 {% endif %}
@@ -42,7 +42,14 @@
           <p>Location: {{ nextClass[4] }}</p>
           {% if nextClass[5] == 0 %}
             {% if allowAttend(nextClass[3]) >= 0 and allowAttend(nextClass[3]) <= 30 %}
-              <button>Take Attendance</button>
+            <form action="/takeAttendance" method="post">
+                <input name="student" id="student" value={{nextClass[1]}} style="display: none">
+                <input name="lesson" id="lesson" value={{nextClass[2]}} style="display: none">
+                <input name="time" id="time" value="{{nextClass[3]}}" style="display: none">
+              <div class="block">
+                <input type="submit" class="attend" value="Attend">
+              </div> 
+            </form>
             {% endif %}
           {% else %}
             <p>Attended</p>
@@ -57,7 +64,7 @@
     {% endif %}
   {% else %}
     <div>
-      Please login to your student account.
+      Please login to your account.
     </div>
   {% endif %}
 {% endblock %}

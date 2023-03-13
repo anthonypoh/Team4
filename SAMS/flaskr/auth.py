@@ -35,7 +35,7 @@ def register():
                 )
                 db.commit()
             except db.IntegrityError:
-                error = f"User {username} is already registered."
+                error = "User {username} is already registered."
             else:
                 return redirect(url_for("auth.login"))
 
@@ -59,12 +59,16 @@ def login():
             error = 'Incorrect username.'
         elif not check_password_hash(user['password'], password):
             error = 'Incorrect password.'
+        print(user)
 
-        if error is None:
+        if error is None and username == 'admin':
+            session.clear()
+            session['user_id'] = user['id']
+            return redirect(url_for("admin.admin"))
+        elif error is None:
             session.clear()
             session['user_id'] = user['id']
             return redirect(url_for('index'))
-
         flash(error)
 
     return render_template('auth/login.html')
